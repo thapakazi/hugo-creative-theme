@@ -16,7 +16,7 @@
             {{ if .Site.Params.contact.phone }}
                 <div class="
                 {{ if .Site.Params.contact.email }}
-                    col-lg-4
+                    col-lg-3
                 {{ else }}
                     col-lg-8
                 {{ end }}
@@ -28,13 +28,37 @@
             {{ if .Site.Params.contact.email }}
                 <div class="
                 {{ if .Site.Params.contact.phone }}
-                    col-lg-4
+                    col-lg-3
                 {{ else }}
                     col-lg-8 col-lg-offset-2
                 {{ end }}
                  text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a></p>
+                </div>
+                {{ end }}
+                 {{ if .Site.Params.contact.youtube_url }}
+                <div class="
+                {{ if .Site.Params.contact.youtube_url }}
+                    col-lg-3
+                {{ else }}
+                    col-lg-8 col-lg-offset-2
+                {{ end }}
+                 text-center">
+                    <i class="fa fa-youtube fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="{{ .Site.Params.contact.youtube_url }}">{{ .Site.Params.contact.youtube_title }}</a></p>
+                </div>
+                {{ end }}
+                {{ if .Site.Params.contact.facebook_title }}
+                <div class="
+                {{ if .Site.Params.contact.facebook }}
+                    col-lg-3
+                {{ else }}
+                    col-lg-8 col-lg-offset-2
+                {{ end }}
+                 text-center">
+                    <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="{{ .Site.Params.contact.facebook }}">{{ .Site.Params.contact.facebook_title }}</a></p>
                 </div>
             {{ end }}
         </div>
